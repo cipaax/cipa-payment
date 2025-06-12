@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Szxenn Payment</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #0f172a, #000);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      margin: 50px auto;
+      padding: 30px;
+      max-width: 400px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: cyan;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .qr {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .nav-buttons button {
+      margin: 10px 5px;
+    }
+    a {
+      color: cyan;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="home" class="card">
+    <h1>Hii, I'm Szxenn</h1>
+    <h3>Szxenn Hosting</h3>
+    <p>Selamat datang di website simpel paymentku, aku harap tidak salah tf ya :v</p>
+    <button class="btn" onclick="showPayment()">Go to Payment</button>
+  </div>
+
+  <div id="payment" class="card" style="display: none;">
+    <h2 style="color: cyan;">Payment Szxenn</h2>
+    <p>Silahkan pilih salah satu metode pembayaran di bawah ini</p>
+    <img src="qris.jpg" alt="QR Code" class="qr">
+    <p>Scan kode QR di atas dengan aplikasi pembayaran Anda</p>
+
+    <div>
+      <button class="btn">▶ E-wallet</button>
+      <button class="btn">▶ Transfer Bank</button>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn" onclick="window.location.href='https://wa.me/08xxxxx'">WhatsApp</button>
+      <button class="btn" onclick="window.location.href='https://t.me/username'">Telegram</button>
+      <button class="btn" onclick="showHome()">Back</button>
+    </div>
+  </div>
+
+  <script>
+    function showPayment() {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('payment').style.display = 'block';
+    }
+
+    function showHome() {
+      document.getElementById('payment').style.display = 'none';
+      document.getElementById('home').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
